@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love/Light Infuser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Love/Light Infuser</h1>
+        <form id="intentionForm" action="start_intention.php" method="POST">
+            <label for="hawkinsLevel">Hawkins Level: <span id="hawkinsValue">600</span></label>
+            <input type="range" id="hawkinsLevel" name="hawkinsLevel" min="600" max="1800" value="600" step="1" oninput="document.getElementById('hawkinsValue').textContent = this.value">
+            
+            <div class="button-group">
+                <button type="submit" id="startBtn">Start Intention</button>
+                <button type="button" id="stopBtn" style="display:none;">Stop Intention</button>
+            </div>
+        </form>
+
+        <div id="intentionStatus" class="hidden">
+            <p id="statusText"><b>Infusing Love/Light to You</b></p>
+        </div>
+    </div>
+
+    <script src="intention_control.js"></script>
+</body>
+</html>

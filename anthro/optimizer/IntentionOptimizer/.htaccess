@@ -1,0 +1,15 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# Block access to .env files
+<Files .envhBf5ReFdS>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to .htaccess files
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</Files>
