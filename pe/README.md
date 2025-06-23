@@ -7,9 +7,11 @@ ai is a PDF conversion of the CAL-4700 distribution for AI teaching.
 
 This is an archive, a backup so to speak. There was already one in another Github repo https://github.com/Folds/osmosian , but it was CAL-3040.
 
-Following Osmosian's own README.md, I include the following:
+Following Osmosian (@GerryRzeppa)'s own README.md, I include the following:
 www.osmosian.com/manifesto.pdf (overview)
 
 www.osmosian.com/instructions.pdf (documentation)Add commentMore actions
 
 www.osmosian.com/cal-4700.zip (complete system including source code)
+
+Gerry has confirmed it belongs to the public domain, as seen in ![this image](PlainEnglishPublicDomain.png).
