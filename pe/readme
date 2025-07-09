@@ -15,3 +15,5 @@ www.osmosian.com/instructions.pdf (documentation)Add commentMore actions
 www.osmosian.com/cal-4700.zip (complete system including source code)
 
 Gerry has confirmed it belongs to the public domain, as seen in ![this image](PlainEnglishPublicDomain.png).
+
+Donald Knuth's 2006 comments on Plain English: ![This image](KnuthPE.png)
