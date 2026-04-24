@@ -2,3 +2,7 @@ This MessagEase works from 2010's Android 2.2 Froyo, tageting 2017's Android 8.1
 I depend on it for my mobile usage: it is that good!
 The ICMI2003 PDF is the paper that began MessagEase all those years ago.
 - June 20, 2025
+
+This MessagEase is v12.19.0, July 22, 2018.
+
+- April 24, 2026
