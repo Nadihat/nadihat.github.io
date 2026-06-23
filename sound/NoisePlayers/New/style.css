@@ -1,0 +1,198 @@
+/* --- Existing styles from previous version --- */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1, p {
+    text-align: center;
+    color: #444;
+}
+
+#noise-player-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.noise-player-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.noise-player-item:hover {
+     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.noise-info {
+    margin-bottom: 15px; /* Reduced margin slightly */
+}
+
+.noise-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.4em;
+    color: #0056b3;
+}
+
+.noise-info p {
+    margin: 0 0 10px 0; /* Reduced margin */
+    font-size: 0.95em;
+    color: #555;
+}
+
+
+/* --- Spectrum Visualizer Styling --- */
+
+/* NEW: Container for visualizer + labels */
+.spectrum-container {
+    margin-bottom: 20px;
+}
+
+.spectrum-visualizer {
+    height: 80px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    /* Removed margin-bottom here, moved to container */
+    display: flex;
+    align-items: flex-end;
+    padding: 5px;
+    gap: 2px; /* Slightly reduced gap for more bars */
+    overflow: hidden;
+    border: 1px solid #ced4da;
+     border-bottom: none; /* Remove bottom border as labels are below */
+     border-bottom-left-radius: 0; /* Adjust radius */
+     border-bottom-right-radius: 0;
+}
+
+.spectrum-bar {
+    flex-grow: 1;
+    background-color: #007bff;
+    /* Width is less critical with flex-grow, but can set a min-width if needed */
+    /* min-width: 2px; */
+    height: 0%;
+    border-radius: 1px 1px 0 0; /* Sharper radius for thin bars */
+    transition: height 0.15s ease-out, background-color 0.2s ease; /* Faster height transition */
+}
+
+.spectrum-bar.underwater {
+    background-color: #17a2b8;
+}
+
+/* NEW: Frequency Label Styling */
+.frequency-labels {
+    display: flex;
+    justify-content: space-between; /* Pushes labels to ends */
+    padding: 3px 8px; /* Small padding */
+    font-size: 0.75em; /* Smaller font */
+    color: #6c757d; /* Grey text */
+    background-color: #e9ecef; /* Match visualizer bg */
+    border: 1px solid #ced4da;
+    border-top: none; /* No top border */
+    border-radius: 0 0 4px 4px; /* Round bottom corners */
+}
+
+.freq-label-start,
+.freq-label-end {
+    font-weight: bold;
+}
+
+
+/* --- Audio Controls Styling (mostly unchanged) --- */
+.audio-controls {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.control-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.play-button {
+    padding: 10px 18px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 90px;
+    text-align: center;
+}
+/* ... rest of control styles remain the same ... */
+.play-button:hover {
+    background-color: #0056b3;
+}
+
+.play-button:active {
+    transform: scale(0.97);
+}
+
+.play-button.playing {
+    background-color: #dc3545;
+}
+.play-button.playing:hover {
+    background-color: #c82333;
+}
+
+.volume-slider {
+    flex-grow: 1;
+    cursor: pointer;
+    max-width: 180px;
+    height: 8px;
+    appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+     width: 18px;
+    height: 18px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+
+.volume-label, .underwater-label {
+    font-size: 0.9em;
+    white-space: nowrap;
+    color: #444;
+}
+
+.underwater-toggle {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    transform: translateY(2px);
+}

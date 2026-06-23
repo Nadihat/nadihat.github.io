@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Meta Description -->
+    <meta name="description" content="An interactive web audio player generating tones (Solfeggio, 432Hz, etc.) or noises (Brown, Pink) based on a selectable base, modified by an adjustable factor, with volume control.">
+
+    <title>Frequency & Noise Multiplier Player | AnthroHeart</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Container for dynamic background elements -->
+    <div id="star-container" aria-hidden="true"></div>
+
+    <main class="container">
+        <h1>Frequency & Noise Multiplier</h1>
+        <h2>Selectable Base & Multiplier | by AnthroHeart</h2>
+
+        <div class="controls">
+
+            <!-- Frequency/Noise Base Selection Dropdown -->
+            <div class="control-group">
+                <label id="frequency-label" for="frequency-select">Select Base Tone / Noise</label>
+                <select id="frequency-select" aria-labelledby="frequency-label">
+                    <!-- Options populated by JavaScript -->
+                </select>
+                <!-- Display Area for Frequency/Noise Benefits/Description -->
+                <div id="frequency-description" class="value-display description-area" aria-live="polite">
+                    <!-- Description populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Multiplier Control -->
+            <div class="control-group">
+                <!-- Label updated to be more generic -->
+                <label id="multiplier-label" for="multiplier-slider">Effect Multiplier (1x - 35x)</label>
+                <input
+                    type="range"
+                    id="multiplier-slider"
+                    min="1"
+                    max="35"
+                    value="1"
+                    step="0.25"
+                    aria-labelledby="multiplier-label"
+                    aria-valuemin="1"
+                    aria-valuemax="35"
+                    aria-valuenow="1"
+                >
+                <!-- Display for actual effect -->
+                <div id="actual-frequency-display" class="value-display actual-freq-display" aria-live="polite">
+                    <!-- Actual frequency or noise info will be displayed here -->
+                </div>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="control-group">
+                <label id="volume-label" for="volume-slider">Volume</label>
+                <input
+                    type="range"
+                    id="volume-slider"
+                    min="0"
+                    max="1"
+                    value="0.25"
+                    step="0.01"
+                    aria-labelledby="volume-label"
+                    aria-valuemin="0"
+                    aria-valuemax="1"
+                    aria-valuenow="0.25"
+                >
+                <div id="volume-display" class="value-display">
+                    Volume: 25%
+                </div>
+            </div>
+        </div>
+
+        <!-- Combined Play/Stop Button -->
+        <button id="play-stop-button" class="button" aria-label="Play sound">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="20" height="20" fill="currentColor">
+                <!-- Play icon path -->
+                <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+            </svg>
+            Play
+        </button>
+
+    </main>
+
+    <!-- Link to external JavaScript, deferred -->
+    <script src="script.js" defer></script>
+</body>
+</html>
