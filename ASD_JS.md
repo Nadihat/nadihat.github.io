@@ -1208,3 +1208,7 @@ All three together would approximate what that girl experienced — but in a mor
 ## Summary
 
 > Wikipedia is correct that CBD raises anandamide. The mechanism in humans isn't direct FAAH inhibition — it's **FABP transport blockade** (same result, different pathway, arguably safer). For Joubert + Asperger's, this makes CBD a potential **fuel extender** that is brainstem-safe, but the tank is so depleted in ASD that CBD alone probably can't provide the dramatic functional shift that THC produces. The research increasingly points toward **high-dose CBD + micro-dose THC** as the combination that both extends endogenous supply AND provides the direct activation needed to cross the threshold into functionality.
+
+///
+
+Later, I felt a short thrill by running the rm command in my PC. However, when it wore off, I felt worse than before, like the nothingness was deeper.
